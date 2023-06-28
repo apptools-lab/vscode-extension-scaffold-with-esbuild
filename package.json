@@ -1,12 +1,13 @@
 {
   "name": "appworks-demo",
-  "displayName": "@appworks/demo",
-  "description": "",
+  "displayName": "AppWorks Demo",
+  "description": "AppWorks Demo",
   "publisher": "iceworks-team",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "engines": {
     "vscode": "^1.78.0"
   },
+  "icon": "assets/logo.png",
   "categories": [
     "Other"
   ],
@@ -21,8 +22,8 @@
     ]
   },
   "scripts": {
-    "package": "vsce package --no-dependencies",
-    "release": "vsce publish --no-dependencies",
+    "package": "vsce package --no-dependencies --allow-missing-repository",
+    "release": "vsce publish --no-dependencies --allow-missing-repository",
     "vscode:prepublish": "pnpm esbuild-base --minify",
     "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
     "watch": "pnpm esbuild-base --sourcemap --watch",
