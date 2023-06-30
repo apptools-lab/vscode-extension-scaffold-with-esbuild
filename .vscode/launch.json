@@ -13,7 +13,7 @@
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--disable-extensions"
 			],
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "outFiles": ["${workspaceFolder}/out/**/*.js"],
       "preLaunchTask": "${defaultBuildTask}"
     },
     {
