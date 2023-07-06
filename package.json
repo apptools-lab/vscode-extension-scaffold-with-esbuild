@@ -25,7 +25,7 @@
     "package": "vsce package --no-dependencies --allow-missing-repository",
     "release": "vsce publish --no-dependencies --allow-missing-repository",
     "vscode:prepublish": "pnpm esbuild-base --minify",
-    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --alias:@=./src",
     "watch": "pnpm esbuild-base --sourcemap --watch",
     "build": "pnpm esbuild-base --sourcemap",
     "compile-tests": "tsc -p . --outDir out",
